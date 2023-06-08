@@ -1,2 +1,2 @@
 # dock
-My docker stack
+# dock
