@@ -8,8 +8,6 @@ entryPoints:
           scheme: https
   https:
     address: ":443"
-  ssh:
-    address: ":22"
 serversTransport:
   insecureSkipVerify: true
 api:
@@ -28,7 +26,7 @@ providers:
 certificatesResolvers:
   cloudflare:
     acme:
-      email: wacheek@gmail.com #add your email
+      email: myemail@myemailprovider.com #add your email
       storage: acme.json
       dnsChallenge:
         provider: cloudflare
