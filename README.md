@@ -23,22 +23,22 @@ su USERNAME
 
 # Setup key
 
-mkdir ~/.ssh && touch ~/.ssh/authorized_keys
-chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
-nano ~/.ssh/authorized_keys
- |_ paste in key
-sudo nano /etc/ssh/sshd_config
- |_ edit the following
- |
- |_ Port YOUR-CHOSEN-PORT-NUMBER example: Port 333
- |_ PermitRootLogin no
- |_ PubkeyAuthentication no
- |_ PasswordAuthentication no
- |
- |_ add to the bottom of the file
- |
- |_ Match User USERNAME
- |_ PubkeyAuthentication yes
+mkdir ~/.ssh && touch ~/.ssh/authorized_keys <br>
+chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys <br>
+nano ~/.ssh/authorized_keys <br>
+ |_ paste in key <br>
+sudo nano /etc/ssh/sshd_config <br>
+ |_ edit the following <br>
+ | <br>
+ |_ Port YOUR-CHOSEN-PORT-NUMBER "example: Port 333" <br>
+ |_ PermitRootLogin no <br>
+ |_ PubkeyAuthentication no <br>
+ |_ PasswordAuthentication no <br>
+ | <br>
+ |_ add to the bottom of the file <br>
+ | <br>
+ |_ Match User USERNAME <br>
+ |_ PubkeyAuthentication yes <br>
  
 # Restart and check status of SSHD service
 
@@ -46,10 +46,10 @@ sudo service sshd restart && sudo service sshd status
 
 # Setup putty
 
-Add new client, use VPS IP and chosen port.
-Left menu > Connection > Data > Auto-login username: USERNAME
-Left menu > SSH > Auth: Browse to private key .ppk 
-Left menu > Session > Saved Sessions box: Give connection a name > Save
+Add new client, use VPS IP and chosen port. <br>
+Left menu > Connection > Data > Auto-login username: USERNAME <br>
+Left menu > SSH > Auth: Browse to private key .ppk <br>
+Left menu > Session > Saved Sessions box: Give connection a name > Save <br>
 
 # Setup putty agent
 
@@ -57,21 +57,22 @@ Add private key .ppk file > enter passphrase when prompted.
 
 # Test SSH
 
-Open second SSH connection to server. Expected behavior is to connect without any user interaction.
+Open second SSH connection to server. <br>
+Expected behavior is to connect without any user interaction.
 
 # Install Docker and plugins
 
-sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg
+sudo apt-get update <br>
+sudo apt-get install ca-certificates curl gnupg <br>
 
-sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
+sudo install -m 0755 -d /etc/apt/keyrings <br>
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg <br>
+sudo chmod a+r /etc/apt/keyrings/docker.gpg <br>
 
-echo \
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo \ <br>
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \ <br>
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \ <br>
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null <br>
   
 sudo apt update
 
