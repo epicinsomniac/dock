@@ -62,23 +62,23 @@ Expected behavior is to connect without any user interaction.
 
 # Git source and samples
 
-cd ~/
-git clone https://github.com/epicinsomniac/dock.git dock/
-cd dock
-cp .env-sample .env
-cp docker-compose.sample.yml docker-compose.yml
+cd ~/<br>
+git clone https://github.com/epicinsomniac/dock.git dock/<br>
+cd dock<br>
+cp .env-sample .env<br>
+cp docker-compose.sample.yml docker-compose.yml<br>
 
 # Setup bashrc and aliases
 
-cp .bashrc-sample ~/.bashrc
-cd ~/
-touch .bash_profile
-nano .bash_profile
- |_ Paste in:
-[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
+cp .bashrc-sample ~/.bashrc<br>
+cd ~/<br>
+touch .bash_profile<br>
+nano .bash_profile<br>
+ |_ Paste in:<br>
+[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"<br>
 
-''' test '''
-``` test ```
+''' test '''<br>
+``` test ```<br>
 
 # Install Docker and plugins
 
