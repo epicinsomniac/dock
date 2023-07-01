@@ -1,7 +1,7 @@
 # dock
-My Debian 11, VPS, Cloudflare DNS, Docker stack foundation and framework:
+My Debian 11-12, VPS, Cloudflare DNS, Docker stack foundation and framework:
 
-# SSH into Debian 11 VPS
+# SSH into Debian 11-12 VPS
 
 apt update && apt -y upgrade && apt -y install wget curl git nano sudo exa tree build-essential
 
