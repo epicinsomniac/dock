@@ -23,6 +23,10 @@ My Debian 11-12, VPS, Cloudflare DNS, Docker stack foundation and framework:
 
 # Setup key
 
+```mkdir ~/.ssh && touch ~/.ssh/authorized_keys
+chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
+nano ~/.ssh/authorized_keys``` <br>
+
 ```mkdir ~/.ssh && touch ~/.ssh/authorized_keys``` <br>
 ```chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys``` <br>
 ```nano ~/.ssh/authorized_keys``` <br>
@@ -42,7 +46,7 @@ My Debian 11-12, VPS, Cloudflare DNS, Docker stack foundation and framework:
  
 # Restart and check status of SSHD service
 
-```sudo service sshd restart && sudo service sshd status```
+```sudo service sshd restart && sudo service sshd status```<br>
  |_ Hit "q" to exit.
 
 # Setup putty
