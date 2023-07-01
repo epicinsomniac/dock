@@ -26,7 +26,7 @@ services:
   db:
     image: mariadb
     restart: unless-stopped
-    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW --innod>
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW --innodb-read-only-compressed=OFF
     volumes:
       - $DAPPS/nextcloud/db:/var/lib/mysql
     environment:
