@@ -3,31 +3,31 @@ My Debian 11-12, VPS, Cloudflare DNS, Docker stack foundation and framework:
 
 # SSH into Debian 11-12 VPS
 
-apt update && apt -y upgrade && apt -y install wget curl git nano sudo exa tree build-essential
+```apt update && apt -y upgrade && apt -y install wget curl git nano sudo exa tree build-essential```
 
 # Restart
 
-shutdown -r now
+```shutdown -r now```
 
 # SSH into VPS
 
-adduser USERNAME
+```adduser USERNAME```
 
 # Add USERNAME to sudo
 
-usermod -aG sudo USERNAME
+```usermod -aG sudo USERNAME```
 
 # login as new user
 
-su USERNAME
+```su USERNAME```
 
 # Setup key
 
-mkdir ~/.ssh && touch ~/.ssh/authorized_keys <br>
-chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys <br>
-nano ~/.ssh/authorized_keys <br>
+```mkdir ~/.ssh && touch ~/.ssh/authorized_keys``` <br>
+```chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys``` <br>
+```nano ~/.ssh/authorized_keys``` <br>
  |_ paste in key <br>
-sudo nano /etc/ssh/sshd_config <br>
+```sudo nano /etc/ssh/sshd_config``` <br>
  |_ edit the following <br>
  | <br>
  |_ Port YOUR-CHOSEN-PORT-NUMBER "example: Port 333" <br>
@@ -42,7 +42,8 @@ sudo nano /etc/ssh/sshd_config <br>
  
 # Restart and check status of SSHD service
 
-sudo service sshd restart && sudo service sshd status
+```sudo service sshd restart && sudo service sshd status```
+ |_ Hit "q" to exit.
 
 # Setup putty
 
@@ -62,44 +63,44 @@ Expected behavior is to connect without any user interaction.
 
 # Git source and samples
 
-cd ~/<br>
-git clone https://github.com/epicinsomniac/dock.git dock/<br>
-cd dock<br>
-cp .env-sample .env<br>
-cp docker-compose.sample.yml docker-compose.yml<br>
+```cd ~/```<br>
+```git clone https://github.com/epicinsomniac/dock.git dock/```<br>
+```cd dock```<br>
+```cp .env-sample .env```<br>
+```cp docker-compose.sample.yml docker-compose.yml```<br>
 
 # Setup bashrc and aliases
 
-cp .bashrc-sample ~/.bashrc<br>
-cd ~/<br>
-touch .bash_profile<br>
-nano .bash_profile<br>
+```cp .bashrc-sample ~/.bashrc```<br>
+```cd ~/```<br>
+```touch .bash_profile```<br>
+```nano .bash_profile```<br>
  |_ Paste the following:<br>
 
 ``` [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc" ```<br>
 
 # Install Docker and plugins
 
-sudo apt-get update <br>
-sudo apt-get install ca-certificates curl gnupg <br>
+```sudo apt-get update ```<br>
+```sudo apt-get install ca-certificates curl gnupg ```<br>
 
-sudo install -m 0755 -d /etc/apt/keyrings <br>
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg <br>
-sudo chmod a+r /etc/apt/keyrings/docker.gpg <br>
+```sudo install -m 0755 -d /etc/apt/keyrings ```<br>
+```curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg ```<br>
+```sudo chmod a+r /etc/apt/keyrings/docker.gpg ```<br>
 
-echo \ <br>
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \ <br>
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \ <br>
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null <br>
+```echo \```<br>
+```  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \``` <br>
+```  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \``` <br>
+```  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null``` <br>
   
-sudo apt update
+```sudo apt update```
 
-sudo apt -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```sudo apt -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin```
 
 # Test Docker and Docker Compose
 
-sudo docker version
+```sudo docker version```
 
-sudo docker compose version
+```sudo docker compose version```
 
 
