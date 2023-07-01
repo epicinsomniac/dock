@@ -25,7 +25,7 @@ My Debian 11-12, VPS, Cloudflare DNS, Docker stack foundation and framework:
 
 ```mkdir ~/.ssh && touch ~/.ssh/authorized_keys
 chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
-nano ~/.ssh/authorized_keys``` <br>
+nano ~/.ssh/authorized_keys```
 
 ```mkdir ~/.ssh && touch ~/.ssh/authorized_keys``` <br>
 ```chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys``` <br>
