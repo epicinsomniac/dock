@@ -1,0 +1,76 @@
+version: '3.7'
+
+volumes:
+  nextcloud:
+  db:
+
+# Create the network: sudo docker network create nextcloud_network
+networks:
+  nextcloud_network:
+    external: false
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    volumes:
+      - $DSOCK:/var/run/docker.sock
+      - $DAPPS/portainer/data:/data
+    container_name: portainer
+    ports:
+      - '9000:9000'
+      - '9443:9443'
+    restart: always
+    security_opt:
+      - no-new-privileges:true
+
+  db:
+    image: mariadb
+    restart: unless-stopped
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW --innod>
+    volumes:
+      - $DAPPS/nextcloud/db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=<PICK A SECURE PASSWORD TO USE>
+      - MYSQL_PASSWORD=<PICK ANOTHER SECURE PASSWORD TO USE>
+      # 1. This is the db user password, it will be used again below
+      - MYSQL_DATABASE=<PICK A DATABASE NAME TO USE>
+      # 2. This is the db name, it will be used again below
+      - MYSQL_USER=<PICK A USER NAME TO USE>
+      # 3. This is the db user, it will be used again below
+    networks:
+      - nextcloud_network
+
+  app:
+    image: nextcloud
+    restart: unless-stopped
+    ports:
+      #- 8080:80
+      # 80:80 on homelab using pihole dns and dns records
+      - 80:80
+    links:
+      - db
+    volumes:
+      - $DAPPS/nextcloud/html:/var/www/html
+      - $DAPPS/nextcloud/data:/var/www/html/data
+    environment:
+      - MYSQL_PASSWORD=<SAME AS ABOVE>
+      # 1. This is the db user password, it should be the same as above
+      - MYSQL_DATABASE=<SAME AS ABOVE> 
+      # 2. This is the db name, it should be the same as above
+      - MYSQL_USER=<SAME AS ABOVE>
+      # 3. This is the db user, it should be the same as above
+      - MYSQL_HOST=db
+      - REDIS_HOST=redis
+      - NEXTCLOUD_TRUSTED_DOMAINS=files.home.lab
+      - VIRTUAL_HOST=files.home.lab
+    networks:
+      - nextcloud_network
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    volumes:
+      - $DAPPS/nextcloud/redis:/data
+    networks:
+      - nextcloud_network
+    restart: unless-stopped
