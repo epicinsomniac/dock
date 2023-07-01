@@ -74,10 +74,8 @@ cp .bashrc-sample ~/.bashrc<br>
 cd ~/<br>
 touch .bash_profile<br>
 nano .bash_profile<br>
- |_ Paste in:<br>
-[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"<br>
+ |_ Paste the following:<br>
 
-''' test '''<br>
 ``` [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc" ```<br>
 
 # Install Docker and plugins
