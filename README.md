@@ -78,7 +78,7 @@ nano .bash_profile<br>
 [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"<br>
 
 ''' test '''<br>
-``` test ```<br>
+``` [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc" ```<br>
 
 # Install Docker and plugins
 
