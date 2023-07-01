@@ -60,6 +60,20 @@ Add private key .ppk file > enter passphrase when prompted.
 Open second SSH connection to server. <br>
 Expected behavior is to connect without any user interaction.
 
+# Git source and samples
+
+cd ~/
+git clone https://
+
+# Setup aliases
+
+cd ~/
+touch .bash_profile
+nano .bash_profile
+ |_ Paste in:
+ ```[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
+```
+
 # Install Docker and plugins
 
 sudo apt-get update <br>
