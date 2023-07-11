@@ -2,8 +2,8 @@
 My Debian 11-12, VPS, Cloudflare DNS, Docker stack foundation and framework:
 
 # Requisites or helpful tools:
-## Windows
-## notepad++ <br>
+# Windows
+# notepad++
 [notepad++](https://notepad-pl![notepad++](https://github.com/epicinsomniac/dock/assets/135930881/ffd5adc1-7499-477f-b10e-c6ccac69e3dd)
 us-plus.org/downloads/)<br>
 
