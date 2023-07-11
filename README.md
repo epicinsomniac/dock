@@ -131,7 +131,7 @@ Finally, reboot:
 
 ```sudo reboot```<br>
 
-<h2>Verify Driver Installation<br>
+Verify Driver Installation<br>
 You should be able to verify that the system recognizes the GPU by running nvidia-smi
 
 ```nvidia-smi```
