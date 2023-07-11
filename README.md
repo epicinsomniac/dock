@@ -73,11 +73,7 @@ Expected behavior is to connect without any user interaction.
 
 ```cp .bashrc-sample ~/.bashrc```<br>
 ```cd ~/```<br>
-```touch .bash_profile```<br>
-```nano .bash_profile```<br>
- |_ Paste the following:<br>
-
-``` [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc" ```<br>
+```source . ~/.bashrc```
 
 # Install Docker and plugins
 
