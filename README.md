@@ -134,5 +134,5 @@ Finally, reboot:
 Verify Driver Installation<br>
 You should be able to verify that the system recognizes the GPU by running nvidia-smi
 
-```nvidia-smi```
+```nvidia-smi```<br>
 ![alt text](https://github.com/epicinsomniac/dock/blob/main/git-images/6_nvidia-smi.png)
