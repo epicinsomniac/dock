@@ -82,7 +82,7 @@ Expected behavior is to connect without any user interaction.
 # Install Docker and plugins
 
 ```sudo apt-get update ```<br>
-```sudo apt-get install ca-certificates curl gnupg ```<br>
+```sudo apt-get -y install ca-certificates curl gnupg ```<br>
 
 ```sudo install -m 0755 -d /etc/apt/keyrings ```<br>
 ```curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg ```<br>
