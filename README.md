@@ -135,4 +135,4 @@ Finally, reboot:
 You should be able to verify that the system recognizes the GPU by running nvidia-smi
 
 ```nvidia-smi```
-
+![alt text](https://github.com/epicinsomniac/dock/blob/main/git-images/6_nvidia-smi.png)
