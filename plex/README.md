@@ -13,6 +13,12 @@
 # Update the APT package index.
 ```sudo apt update```<br>
 # Install
-```sudo apt install plexmediaserver```<br>
-
+```sudo apt install plexmediaserver```
 Dependency Tree:
+![plex1](https://github.com/epicinsomniac/dock/assets/135930881/6766e032-f177-49a1-89d9-77383669f294)
+
+# Start Plex Media Server
+```sudo systemctl start plexmediaserver```
+
+# !!!! Enable Plex Media Server !!!!
+```sudo systemctl enable plexmediaserver```
