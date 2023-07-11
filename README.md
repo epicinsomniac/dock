@@ -106,16 +106,19 @@ Expected behavior is to connect without any user interaction.
 
 # Addendum for pci passthrough NVIDIA on proxmox > debian vm
 
-```According to the NVIDIA developer zone: Create a file:
+According to the NVIDIA developer zone: Create a file:
 
-sudo nano /etc/modprobe.d/blacklist-nouveau.conf
+```sudo nano /etc/modprobe.d/blacklist-nouveau.conf```
+
 With the following contents:
 
-blacklist nouveau
-options nouveau modeset=0
+```blacklist nouveau
+options nouveau modeset=0```
+
 Regenerate the kernel initramfs:
 
-sudo update-initramfs -u
+```sudo update-initramfs -u```
+
 Finally, reboot:
 
-sudo reboot```
+```sudo reboot```
