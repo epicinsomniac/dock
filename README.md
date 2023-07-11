@@ -95,9 +95,13 @@ Expected behavior is to connect without any user interaction.
 
 # Test Docker and Docker Compose
 
-```sudo docker version```
-
-```sudo docker compose version```
+```sudo docker version```<br>
+or use the alias that was set in .bashrc
+```sdv```<br>
+<br>
+```sudo docker compose version```<br>
+or use the aliase that was set in .bashrc
+```sdcv```
 
 
 # Addendum for pci passthrough NVIDIA on proxmox > debian vm
