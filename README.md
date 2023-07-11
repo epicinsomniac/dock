@@ -106,6 +106,14 @@ Expected behavior is to connect without any user interaction.
 
 # Addendum for pci passthrough NVIDIA on proxmox > debian vm
 
+Download NVIDIA Driver
+Before we install the NVIDIA driver, we need to install the linux header files and dkms so when the linux kernel is updated the NVIDIA driver will automatically recompile
+
+``sudo apt-get install dkms linux-headers-$(uname -r)```<br>
+Now we need to install the GPU Driver, and this is where things diverge from the instructions on 3os.org.
+
+Go to https://www.nvidia.com/Download/index.aspx?lang=en-us and search for the driver you need:
+
 According to the NVIDIA developer zone: Create a file:
 
 ```sudo nano /etc/modprobe.d/blacklist-nouveau.conf```
