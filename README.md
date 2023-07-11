@@ -4,9 +4,10 @@ My Debian 11-12, VPS, Cloudflare DNS, Docker stack foundation and framework:
 # Requisites or helpful tools:
 ## Windows
 ## notepad++ <br>
-[notepad++](https://notepad-plus-plus.org/downloads/)
-![notepage++logo](https://github.com/epicinsomniac/dock/assets/135930881/2b858bff-a660-4485-8ad2-3745d82f69a7)<br>
-## filezilla <br?
+[notepad++](https://notepad-pl![notepad++](https://github.com/epicinsomniac/dock/assets/135930881/ffd5adc1-7499-477f-b10e-c6ccac69e3dd)
+us-plus.org/downloads/)<br>
+
+## filezilla <br>
 [filezilla](https://filezilla-project.org/)
 ![filezilla1](https://github.com/epicinsomniac/dock/assets/135930881/e773afb8-d298-4801-aa10-4ba8b9e8c87b)
 ![filezilla2](https://github.com/epicinsomniac/dock/assets/135930881/adcd345a-b633-46e3-b370-0ae5f3e0e8f1)
