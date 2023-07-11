@@ -112,13 +112,13 @@ According to the NVIDIA developer zone: Create a file:
 
 With the following contents:
 
-```blacklist nouveau
-options nouveau modeset=0```
+```blacklist nouveau```<br>
+```options nouveau modeset=0```<br>
 
 Regenerate the kernel initramfs:
 
-```sudo update-initramfs -u```
+```sudo update-initramfs -u```<br>
 
 Finally, reboot:
 
-```sudo reboot```
+```sudo reboot```<br>
