@@ -96,12 +96,15 @@ Expected behavior is to connect without any user interaction.
 # Test Docker and Docker Compose
 
 ```sudo docker version```<br>
-or use the alias that was set in .bashrc
+or use the alias that was set in .bashrc<br>
 ```sdv```<br>
-<br>
+![sdv](https://github.com/epicinsomniac/dock/assets/135930881/3b9cf337-308a-4300-b8c3-a4fa8b27273a)
+
 ```sudo docker compose version```<br>
-or use the aliase that was set in .bashrc
+or use the aliase that was set in .bashrc<br>
 ```sdcv```
+![sdcv](https://github.com/epicinsomniac/dock/assets/135930881/a2b81c4b-a98f-4424-a627-eb206f9d5e70)
+
 
 
 # Addendum for pci passthrough NVIDIA on proxmox > debian vm
@@ -112,7 +115,14 @@ Before we install the NVIDIA driver, we need to install the linux header files a
 ```sudo apt-get install dkms linux-headers-$(uname -r)```<br>
 Now we need to install the GPU Driver, and this is where things diverge from the instructions on 3os.org.
 
-Go to https://www.nvidia.com/Download/index.aspx?lang=en-us and search for the driver you need:
+Go to https://www.nvidia.com/Download/index.aspx?lang=en-us and search for the driver you need:<br>
+![nvidia-driver](https://github.com/epicinsomniac/dock/assets/135930881/9b32f8f9-ea27-405a-8151-fff020c431aa)<br>
+![nvidia-driver2](https://github.com/epicinsomniac/dock/assets/135930881/5b2e5e0d-a41f-48ee-94cc-7b84f1d1e08f)<br>
+![nvidia-driver3](https://github.com/epicinsomniac/dock/assets/135930881/64d66d1e-7e5e-4538-abd1-a46fd470b75e)<br>
+![nvidia-driver4](https://github.com/epicinsomniac/dock/assets/135930881/4df1e8ca-1678-48ba-b6d3-092e02b4f531)<br>
+
+
+
 
 According to the NVIDIA developer zone: Create a file:
 
@@ -135,4 +145,4 @@ Verify Driver Installation<br>
 You should be able to verify that the system recognizes the GPU by running nvidia-smi
 
 ```nvidia-smi```<br>
-![alt text](https://github.com/epicinsomniac/dock/blob/main/git-images/6_nvidia-smi.png)
+![nvidia-smi](https://github.com/epicinsomniac/dock/assets/135930881/acc5f4e9-7fd6-4316-99bd-0a4d1016d3e8)
