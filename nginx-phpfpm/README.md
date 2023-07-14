@@ -1,4 +1,4 @@
-  nginx:
+```  nginx:
    container_name: nginx-app
    image: nginx:latest
    env_file:
@@ -20,3 +20,4 @@
       - $DAPPS/nginx/var/www/html:/var/www/html
     networks:
       - routing
+```
