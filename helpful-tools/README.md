@@ -1,10 +1,10 @@
 # Requisites or helpful tools:
 ## For Windows
 ### notepad++
-[https://notepad-plus-plus.org/]
+[notepad++ for Windows](https://notepad-plus-plus.org/)
 
 ### filezilla
-[filezilla](https://filezilla-project.org/)
+[filezilla for Windows](https://filezilla-project.org/)
 
 ![filezilla1](https://github.com/epicinsomniac/dock/assets/135930881/e773afb8-d298-4801-aa10-4ba8b9e8c87b)
 
@@ -14,4 +14,4 @@
 
 ## For Debian
 ### notepadqq
-[https://notepadqq.com/s/]
+[notepadqq for linux](https://notepadqq.com/s/)
