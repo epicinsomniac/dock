@@ -2,7 +2,9 @@
 ## For Windows
 
 ### PuTTY
+
 [PuTTY for windows](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
 Recommend: 64 MSI installer which includes PuTTY (for SSH), PuTTYgen (for creating Pubkeys) & Pageant (for Pubkey Passphrase)
 
 ### notepad++
