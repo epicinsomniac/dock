@@ -1,3 +1,9 @@
+# Codex
+Codex is a web server comic book browser and reader.
+
+https://hub.docker.com/r/ajslater/codex
+
+
 # docker-compose.yaml
 
 ```
