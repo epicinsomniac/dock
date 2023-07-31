@@ -55,7 +55,7 @@ services:
     environment:
       - MYSQL_PASSWORD=<SAME AS ABOVE>
       # 1. This is the db user password, it should be the same as above
-      - MYSQL_DATABASE=<SAME AS ABOVE> 
+      - MYSQL_DATABASE=<SAME AS ABOVE>
       # 2. This is the db name, it should be the same as above
       - MYSQL_USER=<SAME AS ABOVE>
       # 3. This is the db user, it should be the same as above
